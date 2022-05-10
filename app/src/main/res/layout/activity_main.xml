@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblPeopleQuanty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Quantas Pessoas?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBillTotal" />
+
+    <TextView
+        android:id="@+id/lblTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Gorgeta:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPeopleQuantity" />
+
+    <TextView
+        android:id="@+id/lblBillTotal"
+        android:layout_width="95dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Total da Conta:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPeopleQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblPeopleQuanty" />
+
+    <SeekBar
+        android:id="@+id/seekBarTip"
+        android:layout_width="230dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTip" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <TextView
+        android:id="@+id/lblTipValueTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Valor Gorjeta:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip" />
+
+    <TextView
+        android:id="@+id/lblTotalValueTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Total:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTipValueTitle" />
+
+    <TextView
+        android:id="@+id/lblTotalPerPersonTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Valor Por Pessoa:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTotalValueTitle" />
+
+    <TextView
+        android:id="@+id/lblTipValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/lblTipValueTitle"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip" />
+
+    <TextView
+        android:id="@+id/lblTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lblTotalValueTitle"
+        app:layout_constraintTop_toBottomOf="@+id/lblTipValue" />
+
+    <TextView
+        android:id="@+id/lblTotalPerPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/lblTotalPerPersonTitle"
+        app:layout_constraintTop_toBottomOf="@+id/lblTotalValue" />
+
+    <EditText
+        android:id="@+id/txtBillTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblBillTotal" />
+
+    <TextView
+        android:id="@+id/lblTipPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/seekBarTip"
+        app:layout_constraintTop_toBottomOf="@+id/lblTip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
